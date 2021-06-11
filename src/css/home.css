@@ -1,0 +1,19 @@
+@media screen and (min-device-width:1025px) {
+    .home-main{
+        width: 82%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+    }
+}
+@media screen and (max-device-width:769px) {
+    .home-main{
+        width: 82%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+}

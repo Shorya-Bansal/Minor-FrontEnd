@@ -1,0 +1,192 @@
+@media screen and (min-device-width:1025px) {
+    .home-box{
+        height: 40rem;
+        width:68%;
+        background-color: rgb(235, 235, 235);
+        z-index: 1;
+        margin:3.5rem auto;
+        box-sizing: border-box;
+        border: 1px solid inherit;
+        border-radius: 5px;
+        box-shadow: 25px 20px 18px #525151b9;
+        overflow: hidden;
+        opacity: 0.97;
+    }
+    .logo{
+        width: 41.2%;
+        height: 40rem;
+        background-color: white;
+        float: left;
+    }
+    .logo-img{  
+        margin: 40% 20%;
+    }
+    .login-side{
+        float: right;
+        height: 40rem;
+        width: 58.8%;
+    }
+    .login-content{
+        margin: 8rem 5rem;
+    }
+    .username,
+    .password{
+        width: 100%;
+        height: 2.6rem;
+        border-radius: 4px;
+        border: 1px solid gray;
+        margin-top: 8px;
+        padding: 6px;
+    }
+    .username:focus,
+    .password:focus{
+        outline-color: #0d6efd;
+        outline-style: solid 10px;
+    }
+    
+}
+
+@media screen and (max-device-width:1025px) and (min-device-width:769px) {
+    .home-box{
+        height: 50rem;
+        width:80%;
+        background-color: rgb(235, 235, 235);
+        z-index: 1;
+        margin:17rem auto;
+        box-sizing: border-box;
+        border: 1px solid inherit;
+        border-radius: 5px;
+        box-shadow: 25px 20px 18px #525151b9;
+        overflow: hidden;
+        opacity: 0.97;
+    }
+    .logo{
+        width: 41.2%;
+        height: 50rem;
+        background-color: white;
+        float: left;
+    }
+    .logo-img{  
+        margin: 60% 20%;
+    }
+    .login-side{
+        float: right;
+        height: 50rem;
+        width: 58.8%;
+    }
+    .login-content{
+        margin: 12rem 3.5rem;
+    }
+    .username,
+    .password{
+        width: 100%;
+        height: 2.6rem;
+        border-radius: 4px;
+        border: 1px solid gray;
+        margin-top: 8px;
+        padding: 6px;
+    }
+    .username:focus,
+    .password:focus{
+        outline-color: #0d6efd;
+        outline-style: solid 10px;
+    }
+    
+}
+
+
+@media screen and (max-device-width:768px) and (min-device-width:481px) {
+    .home-box{
+        height: 40rem;
+        width:100%;
+        background-color: rgb(235, 235, 235);
+        z-index: 1;
+        margin:12rem auto;
+        box-sizing: border-box;
+        border: 1px solid inherit;
+        border-radius: 5px;
+        box-shadow: 25px 20px 18px #525151b9;
+        overflow: hidden;
+        opacity: 0.97;
+    }
+    .logo{
+        width: 41.2%;
+        height: 50rem;
+        background-color: white;
+        float: left;
+    }
+    .logo-img{  
+        margin: 40% 12%;
+    }
+    .login-side{
+        float: right;
+        height: 50rem;
+        width: 58.8%;
+    }
+    .login-content{
+        margin: 8rem 2.5rem;
+    }
+    .username,
+    .password{
+        width: 100%;
+        height: 2.6rem;
+        border-radius: 4px;
+        border: 1px solid gray;
+        margin-top: 8px;
+        padding: 6px;
+    }
+    .username:focus,
+    .password:focus{
+        outline-color: #0d6efd;
+        outline-style: solid 10px;
+    }
+    
+}
+
+
+@media screen and (max-device-width:480px)  {
+    .home-box{
+        height: 40rem;
+        width:95%;
+        background-color: rgb(235, 235, 235);
+        z-index: 1;
+        margin:3rem auto;
+        box-sizing: border-box;
+        border: 1px solid inherit;
+        border-radius: 5px;
+        box-shadow: 25px 20px 18px #525151b9;
+        overflow: hidden;
+        opacity: 0.97;
+    }
+    .logo-img{  
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        margin-top: 7px;
+        border: 1px solid inherit;
+        border-radius: 10px
+    }
+    .login-side{
+        height: 21rem;
+        width: 100%;
+    }
+    .login-content{
+        margin: 2rem 1.5rem;
+    }
+    .username,
+    .password{
+        width: 100%;
+        height: 2.6rem;
+        border-radius: 4px;
+        border: 1px solid gray;
+        margin-top: 8px;
+        padding: 6px;
+    }
+    .username:focus,
+    .password:focus{
+        outline-color: #0d6efd;
+        outline-style: solid 10px;
+    }
+    
+}
