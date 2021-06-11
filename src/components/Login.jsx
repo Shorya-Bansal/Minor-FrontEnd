@@ -33,9 +33,6 @@ function Login({ history }) {
                 const token = jwtDecode(response.data);
                 authContext.SetUser(token);
                 window.location = "/home";
-                setError("dwadawdawdawdawdawd");
-
-
             } else {
                 setError(response.data);
             }
