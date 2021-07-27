@@ -1,0 +1,68 @@
+@media screen and (min-device-width:1061px) {
+    .settings-main{
+        width: 81%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .settings-content{
+        margin: 3rem;
+        border: 1px solid rgb(218, 218, 218);
+        border-radius: 4px;
+        width: 40%;
+        padding:1rem;
+    }
+}
+@media screen and (max-device-width:1060px) and (min-device-width:769px){
+    .settings-main{
+        width: 77%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .settings-content{
+        margin: 3rem ;
+        border: 1px solid rgb(218, 218, 218);
+        border-radius: 4px;
+        width: 45%;
+        padding:1rem;
+    }
+}
+@media screen and (max-device-width:768px) and (min-device-width:481px){
+    .settings-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .settings-content{
+        margin: 3rem;
+        border: 1px solid rgb(218, 218, 218);
+        border-radius: 4px;
+        width: 50%;
+        padding:1rem;
+    }
+}
+@media screen and (max-device-width:480px) {
+    .settings-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .settings-content{
+        margin: 1.2rem;
+        border: 1px solid rgb(218, 218, 218);
+        border-radius: 4px;
+        width: 86%;
+        padding:1rem;
+    }
+}

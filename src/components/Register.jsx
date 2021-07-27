@@ -3,7 +3,7 @@ import PhoneInput from "react-phone-input-2";
 import * as Yup from "yup";
 import { Formik } from "formik";
 import { Link } from "react-router-dom";
-import jwtDecode from "jwt-decode";
+import { ToastContainer, toast } from "react-toastify";
 import { RadioGroup, FormControlLabel, Radio } from "@material-ui/core";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
@@ -13,13 +13,19 @@ import AuthContext from "./../auth/context";
 import "../css/register.css";
 import "react-phone-input-2/lib/bootstrap.css";
 import logo from "../images/logo.jpg";
+import profile from "../images/profile_default.png"
 
 function Register({ history }) {
   const authContext = useContext(AuthContext);
 
+  /* If User Is Not valid Then The user is redirected to different routes... */
   useEffect(() => {
-    if (authContext.User !== null) {
-      history.replace("/home");
+    if (localStorage.getItem("auth-token") === null) {
+      history.push("/login");
+    } else if (authContext.User.AccountType === "Not Admin") {
+      history.push("/unAuthorized");
+    } else {
+      return
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -41,6 +47,7 @@ function Register({ history }) {
         [Yup.ref("Password"), null],
         "Passwords must match"
       ),
+      ProfilePhoto: Yup.string(),
       AccountType: Yup.string().required("You must select a value"),
     });
   };
@@ -48,10 +55,18 @@ function Register({ history }) {
   const handleRegister = async (values) => {
     try {
       const result = await api.Register(values);
-      localStorage.setItem("auth-token", result.data);
-      const token = jwtDecode(result.data);
-      authContext.SetUser(token);
+      /* localStorage.setItem("auth-token", result.data.token);
+      const token = jwtDecode(result.data.token);
+      localStorage.setItem("image", result.data.ProfilePhoto);
+      authContext.SetUser(token); */
+      if (result.ok) {
+        toast.success(result.data);
+      }
+      else {
+        toast.alert(result.data);
+      }
       history.replace("/home");
+
     } catch (err) {
       console.log(err);
     }
@@ -59,6 +74,7 @@ function Register({ history }) {
 
   return (
     <div className="container">
+      <ToastContainer />
       <div className="register-head">
         <Link to="/home" style={{ textDecoration: "none", color: "black" }}>
           <h2 style={{ textAlign: "center" }}>
@@ -77,6 +93,7 @@ function Register({ history }) {
               Email: "",
               Password: "",
               ConfirmPassword: "",
+              ProfilePhoto: profile,
               AccountType: "Not Admin",
             }}
             onSubmit={(values) => handleRegister(values)}
@@ -101,6 +118,7 @@ function Register({ history }) {
                   <input
                     type="text"
                     id="name"
+                    autoFocus
                     onBlur={() => setFieldTouched("Name")}
                     className="name"
                     onChange={handleChange("Name")}
@@ -222,11 +240,11 @@ function Register({ history }) {
                   onClick={handleSubmit}
                   disabled={
                     errors.Email ||
-                    errors.Password ||
-                    errors.ConfirmPassword ||
-                    errors.Name ||
-                    errors.Phone ||
-                    values.ConfirmPassword !== values.Password
+                      errors.Password ||
+                      errors.ConfirmPassword ||
+                      errors.Name ||
+                      errors.Phone ||
+                      values.ConfirmPassword !== values.Password
                       ? true
                       : false
                   }
@@ -236,6 +254,10 @@ function Register({ history }) {
               </>
             )}
           </Formik>
+          <button className="btn btn-danger btn-lg mt-3 px-5"
+            style={{ width: "100%" }}
+            onClick={() => { history.push("/home") }}
+          >Cancel</button>
         </div>
       </div>
     </div>

@@ -1,38 +1,36 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 
 import DehazeRoundedIcon from "@material-ui/icons/DehazeRounded";
 
 import Sidebar from "./Sidebar";
+import NavbarAccount from "../Material-ui-components/NavbarAccountPanel";
+import NavbarUsers from "../Material-ui-components/NavbarUsersPanel";
 
-import logo from "../images/logo.jpg";
 import "../css/navbar.css";
-import { useContext } from "react";
+
 import AuthContext from "../auth/context";
 
 function NavBar() {
   const [width, setWidth] = useState("0%");
-  const [navWidth, setNavWidth] = useState("82%");
   const [checkValue, setValue] = useState(false);
   const [visibility, setVisibility] = useState("hidden");
-  const authContext = useContext(AuthContext);
 
-  const handleLogout = () => {
-    localStorage.removeItem("auth-token");
-    authContext.SetUser(null);
-    window.location = "/";
-  };
+  const authContext = useContext(AuthContext);
+  const windowWidth = window.innerWidth;
+
 
   const handleSidebar = () => {
-    console.log(checkValue);
+
     setVisibility("visible");
     setValue(!checkValue);
+
     if (window.innerWidth < 769) {
       if (checkValue) {
-        setWidth("80%");
-        setNavWidth("100%");
+        setWidth("300px");
       } else {
+        setVisibility("hidden");
         setWidth("0%");
-        setNavWidth("100%");
       }
     }
   };
@@ -56,15 +54,14 @@ function NavBar() {
     setVisibility("hidden");
   };
 
-  const handleUserDropDown = () => {};
 
   return (
     <div>
       <div ref={node}>
-        {window.innerWidth < 769 ? (
-          <Sidebar width={width}></Sidebar>
+        {windowWidth < 769 ? (
+          <Sidebar width={width} handleSidebar={handleSidebar} ></Sidebar>
         ) : (
-          <Sidebar width={"18%"}></Sidebar>
+          <Sidebar width={authContext.Width.sideWidth}></Sidebar>
         )}
       </div>
       <div
@@ -73,7 +70,7 @@ function NavBar() {
       />
       <div
         className="navbar-outline"
-        style={{ width: window.innerWidth < 769 ? "100%" : navWidth }}
+        style={{ width: authContext.Width.navWidth }}
       >
         <div>
           {window.innerWidth < 769 ? (
@@ -85,11 +82,19 @@ function NavBar() {
             </div>
           ) : null}
           <div>
-            <div className="user-panel" onClick={handleUserDropDown}>
-              <img src={logo} alt="profile" className="profile-image" />
-              <button onClick={handleLogout} className="user-navbar">
-                {authContext.User?.Name}
-              </button>
+            <div className="navbar-option" style={{ display: "inline" }}>
+              <Link to="/home"
+                style={{ textDecoration: "none", color: "	#404040" }}>
+                <span >Home</span>
+              </Link>
+              {authContext.User.AccountType === "Admin" ?
+                <span style={{ zIndex: "1", position: "relative" }}>
+                  <NavbarUsers />
+                </span>
+                : null}
+            </div>
+            <div className="user-panel">
+              <NavbarAccount value={authContext.User}></NavbarAccount>
             </div>
           </div>
         </div>

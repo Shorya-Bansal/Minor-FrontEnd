@@ -1,4 +1,5 @@
-@media screen and (min-device-width:1025px) {
+@media screen and (min-device-width:1200px)
+{
     .register-user
     {
         width:35%;
@@ -38,8 +39,48 @@
         outline-style: solid 10px;
     }
 }
+@media screen and (min-device-width:992px) and (max-device-width:1199px) {
+    .register-user
+    {
+        width:45%;
+        height: 100%;
+        border: 1px solid rgb(197, 197, 197);
+        border-radius: 4px;
+        box-shadow:0px 0px 7px rgb(187, 187, 187);
+        margin: 2rem auto;
+        
+    }
+    .register-head{
+        margin-top: 1rem;
+    }
+    .register-logo{
+        width: 50px;
+        margin-right: 5px;
+    }
+    .register-details{
+        margin:2rem 2rem 5rem;
+    }
+    .name,
+    .email,
+    .phone,
+    .password{
+        width: 100%;
+        height: 2.6rem;
+        border-radius: 4px;
+        border: 1px solid #CACACA;
+        margin-top: 5px;
+        padding: 20px 6px;
+    }
+    .name:focus,
+    .email:focus,
+    .phone:focus
+    .password:focus{
+        outline-color: #0d6efd;
+        outline-style: solid 10px;
+    }
+}
 
-@media screen and (max-device-width:1025px) and (min-device-width:769px) {
+@media screen and (max-device-width:991px) and (min-device-width:769px) {
     .register-user
     {
         width:65%;
@@ -51,13 +92,10 @@
         
     }
     .register-head{
-        margin-top: 6rem;
-    }
-    h2{
-        font-size: 3rem;
+        margin-top: 1rem;
     }
     .register-logo{
-        width: 90px;
+        width: 60px;
         margin-right: 5px;
     }
     .register-details{
@@ -90,7 +128,7 @@
 {
     .register-user
     {
-        width:65%;
+        width:85%;
         height: 100%;
         border: 1px solid rgb(197, 197, 197);
         border-radius: 4px;
@@ -99,13 +137,13 @@
         
     }
     .register-head{
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     h2{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .register-logo{
-        width: 80px;
+        width: 60px;
         margin-right: 5px;
     }
     .register-details{

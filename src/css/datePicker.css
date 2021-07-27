@@ -1,0 +1,32 @@
+@media screen and (min-device-width:1061px) {
+    .date-picker-main{
+        float: right;
+        margin-right: 3%;
+        margin-top: 1%;
+        z-index: 0;
+    }
+}
+@media screen and (max-device-width:1060px) and (min-device-width:769px){
+    .date-picker-main{
+        float: right;
+        margin-right: 3%;
+        margin-top: 1%;
+        z-index: 0;
+    }
+}
+@media screen and (max-device-width:768px) and (min-device-width:481px){
+    .date-picker-main{
+        float: right;
+        margin-right: 3%;
+        margin-top: 1%;
+        z-index: 0;
+    }
+}
+@media screen and (max-device-width:480px) {
+    .date-picker-main{
+        float: right;
+        margin-right: 3%;
+        margin-top: 1%;
+        z-index: 0;
+}
+}

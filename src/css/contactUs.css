@@ -1,0 +1,175 @@
+@media screen and (min-device-width:1061px) {
+    .contact-main{
+        width: 81%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        min-height: 100vh;
+        height: 100%;
+        font-family: "Lato";
+        z-index:0;
+    }
+    .contact-details{
+        border: 1px solid rgb(173, 173, 173);
+        border-radius: 4px;
+        width: 700px;
+        margin: 3rem 5rem;
+        padding: 1rem;
+    }
+    .contact-submit-button,
+    .contact-cancel-button{
+        width: 45%;
+        margin: 1rem;
+    }
+    .contact-problem-image-div{
+        border-radius: 4px;
+        text-align: center;
+        background-color: rgb(233, 233, 233);
+        width: 98%;
+        height: 100%;
+        padding: 1rem 0;
+        
+    }
+    .problem-img{
+        width: 50%;
+        height: 200px;
+        background-color: rgb(233, 233, 233);
+        object-fit: contain;
+        display: block;
+        margin-left: 0.5rem;
+    }
+    .image-remove {
+        margin:-59% 0 0 45%;
+    }
+}
+@media screen and (max-device-width:1060px) and (min-device-width:769px){
+    .contact-main{
+        width: 77%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .contact-details{
+        border: 1px solid rgb(173, 173, 173);
+        border-radius: 4px;
+        width: 550px;
+        margin: 2rem 1rem;
+        padding: 1rem;
+    }
+    .contact-submit-button,
+    .contact-cancel-button{
+        width: 47%;
+        margin: 7px;
+    }
+    .contact-problem-image-div{
+        border-radius: 4px;
+        margin: 1rem;
+        text-align: center;
+        background-color: rgb(233, 233, 233);
+        width: 98%;
+        height: 100%;
+        padding: 1rem 0;
+    }
+    .problem-img{
+        width: 47%;
+        height: 200px;
+        background-color: rgb(233, 233, 233);
+        object-fit: contain;
+        display: block;
+        margin-left: 0.5rem;
+    }
+    .image-remove {
+        margin:-75% 0 0 40%;
+    }
+}
+@media screen and (max-device-width:768px) and (min-device-width:481px){
+    .contact-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .contact-details{
+        border: 1px solid rgb(173, 173, 173);
+        border-radius: 4px;
+        width: 95%;
+        margin: 2rem 1rem;
+        padding: 1rem;
+    }
+    .contact-submit-button,
+    .contact-cancel-button{
+        width: 48%;
+        margin: 2px;
+    }
+    .contact-problem-image-div{
+        border-radius: 4px;
+        margin: 1rem;
+        text-align: center;
+        background-color: rgb(233, 233, 233);
+        width: 98%;
+        height: 100%;
+        padding: 1rem 0;
+    }
+    .problem-img{
+        width: 47%;
+        height: 200px;
+        background-color: rgb(233, 233, 233);
+        object-fit: contain;
+        display: block;
+        margin-left: 0.5rem;
+    }
+    .image-remove {
+        position: absolute;
+        left:42%;
+        bottom:-40px;
+    }
+}
+@media screen and (max-device-width:480px) {
+    .contact-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .contact-details{
+        border: 1px solid rgb(173, 173, 173);
+        border-radius: 4px;
+        width: 92%;
+        margin: 2rem 4%;
+        padding: 1rem;
+    }
+    .contact-submit-button,
+    .contact-cancel-button{
+        width: 100%;
+    }
+    .contact-problem-image-div{
+        border-radius: 4px;
+        margin: 1rem;
+        text-align: center;
+        background-color: rgb(233, 233, 233);
+        width: 98%;
+        height: 100%;
+        padding: 1rem 0;
+    }
+    .problem-img{
+        width: 96%;
+        height: 200px;
+        background-color: rgb(233, 233, 233);
+        object-fit: contain;
+        display: block;
+        margin-left: 0.5rem;
+    }
+    .image-remove {
+        position: absolute;
+        left: 75%;
+        bottom: -7%;
+    }
+}

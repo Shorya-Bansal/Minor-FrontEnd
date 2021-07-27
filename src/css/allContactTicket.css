@@ -1,0 +1,136 @@
+@media screen and (min-device-width:1061px) {
+    .contact-ticket-main{
+        width: 81%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        min-height: 100vh;
+        height: 100%;
+        font-family: "Lato";
+        z-index:0;
+    }
+    .contact-ticket-head{
+        margin: 3rem 5rem;
+    }
+    .contact-ticket-details{
+        border: 1px solid rgb(133, 133, 133);
+        border-radius:4px ;
+        width: 650px;
+        margin: 1rem 0rem;
+        padding: 1rem;
+    }
+    .reply-button{
+        float: right;
+    }
+    .contact-ticket-div{
+        display: inline-block;
+        position: relative;
+    }
+    .ticket-query{
+        width: 450px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+@media screen and (max-device-width:1060px) and (min-device-width:769px){
+    .contact-ticket-main{
+        width: 77%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .contact-ticket-head{
+        margin: 2rem 2rem;
+    }
+    .contact-ticket-details{
+        border: 1px solid rgb(133, 133, 133);
+        border-radius:4px ;
+        width: 550px;
+        margin: 1rem 0rem;
+        padding: 1rem;
+    }
+    .reply-button{
+        float: right;
+    }
+    .contact-ticket-div{
+        display: inline-block;
+        position: relative;
+    }
+    .ticket-query{
+        width: 350px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+@media screen and (max-device-width:768px) and (min-device-width:481px){
+    .contact-ticket-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .contact-ticket-head{
+        margin: 2rem 1.5rem;
+    }
+    .contact-ticket-details{
+        border: 1px solid rgb(133, 133, 133);
+        border-radius:4px ;
+        width: 100%;
+        margin: 1rem 0rem;
+        padding: 1rem;
+    }
+    .reply-button{
+        float: right;
+    }
+    .contact-ticket-div{
+        display: inline-block;
+        position: relative;
+    }
+    .ticket-query{
+        width: 250px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+@media screen and (max-device-width:480px) {
+    .contact-ticket-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .contact-ticket-head{
+        margin: 0.5rem 1rem;
+    }
+    .contact-ticket-details{
+        border: 1px solid rgb(133, 133, 133);
+        border-radius:4px ;
+        width: 100%;
+        margin: 1rem 0rem;
+        padding: 1rem;
+    }
+    .reply-button{
+        float: right;
+    }
+    .contact-ticket-div{
+        display: inline-block;
+        position: relative;
+    }
+    .ticket-query{
+        width: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}

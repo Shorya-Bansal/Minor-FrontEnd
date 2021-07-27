@@ -1,5 +1,5 @@
 @media screen and (min-device-width:1301px) {
-    .home-main{
+    .lab-main{
         width: 81%;
         float: right;
         background-color: rgb(240, 240, 240);
@@ -10,40 +10,19 @@
         overflow-x: hidden;
         padding-bottom: 3rem;
     }
-    .home-background-image{
-        z-index: 0;
-        position: absolute;
-        opacity: 0.06;
-        top: 50%;
-        left: 50%;
-        margin-top: -200px;
-        margin-left: -100px;
-        width: 400px;
-    }
-    .home-clg-history{
-        margin:2rem 3rem;
-        width: 80%;
-    }
-    .home-history-p{
-        color: rgb(58, 58, 58);
-        margin-top: 16px;
-    }
-    .home-span{
-        font-weight: bold;
-    }/* 
-    .home-lab-main{
+    .lab-lab-main{
         float: left;
         margin:36px 24px;
     }
-    .home-booking-div{
+    .lab-booking-div{
         display: flex;
         flex-wrap: wrap;
         width: 95%;
         margin: 0 2rem;
-    } */
+    }
 }
 @media screen and (min-device-width:1061px) and (max-device-width:1300px) {
-    .home-main{
+    .lab-main{
         width: 81%;
         float: right;
         background-color: rgb(240, 240, 240);
@@ -54,43 +33,22 @@
         overflow-x: hidden;
         padding-bottom: 3rem;
     }
-    .home-h2{
+    .lab-h2{
         font-size: 1.5rem;
     }
-    .home-background-image{
-        z-index: 0;
-        position: absolute;
-        opacity: 0.06;
-        top: 50%;
-        left: 50%;
-        margin-top: -200px;
-        margin-left: -100px;
-        width: 400px;
-    }
-    .home-clg-history{
-        margin:2rem 3rem;
-        width: 80%;
-    }
-    .home-history-p{
-        color: rgb(58, 58, 58);
-        margin-top: 16px;
-    }
-    .home-span{
-        font-weight: bold;
-    }/* 
-    .home-lab-main{
+    .lab-lab-main{
         float: left;
         margin:36px 20px;
     }
-    .home-booking-div{
+    .lab-booking-div{
         display: flex;
         flex-wrap: wrap;
         width: 95%;
         margin: 0 2rem;
-    } */
+    }
 }
 @media screen and (max-device-width:1060px) and (min-device-width:769px){
-    .home-main{
+    .lab-main{
         width: 77%;
         float: right;
         background-color: rgb(240, 240, 240);
@@ -102,45 +60,24 @@
         padding-bottom: 3rem;
     }
     
-    .home-h2{
+    .lab-h2{
         font-size: 1.5rem;
         max-width: 280px;
     }
-    .home-background-image{
-        z-index: 0;
-        position: absolute;
-        opacity: 0.06;
-        top: 50%;
-        left: 50%;
-        margin-top: -200px;
-        margin-left: -100px;
-        width: 400px;
-    }
-    .home-clg-history{
-        margin:2rem 3rem;
-        width: 80%;
-    }
-    .home-history-p{
-        color: rgb(58, 58, 58);
-        margin-top: 16px;
-    }
-    .home-span{
-        font-weight: bold;
-    }/* 
-    .home-lab-main{
+    .lab-lab-main{
         margin:18px 0px 36px 15px;
         float: left;
 
     }
-    .home-booking-div{
+    .lab-booking-div{
         display: flex;
         flex-wrap: wrap;
         width: 95%;
         margin: 0 2rem;
-    } */
+    }
 }
 @media screen and (max-device-width:768px) and (min-device-width:525px){
-    .home-main{
+    .lab-main{
         width: 100%;
         float: right;
         background-color: rgb(240, 240, 240);
@@ -151,46 +88,25 @@
         overflow-x: hidden;
         padding-bottom: 3rem;
     }
-    .home-h2{
+    .lab-h2{
         font-size: 1.5rem;
         width: 90%;
         max-width: 300px;
     }
-    .home-background-image{
-        z-index: 0;
-        position: absolute;
-        opacity: 0.06;
-        top: 100%;
-        left: 50%;
-        margin-top: -200px;
-        margin-left: -200px;
-        width: 400px;
-    }
-    .home-clg-history{
-        margin:2rem 3rem;
-        width: 80%;
-    }
-    .home-history-p{
-        color: rgb(58, 58, 58);
-        margin-top: 16px;
-    }
-    .home-span{
-        font-weight: bold;
-    }/* 
-    .home-lab-main{
+    .lab-lab-main{
         margin:26px 24px;
         position: absolute;
         top: 5rem;
     }
-    .home-booking-div{
+    .lab-booking-div{
         display: flex;
         flex-wrap: wrap;
         width: 95%;
         margin: 0 1rem;
-    } */
+    }
 }
 @media screen and (max-device-width:524px) {
-    .home-main{
+    .lab-main{
         width: 100%;
         float: right;
         background-color: rgb(240, 240, 240);
@@ -201,40 +117,19 @@
         overflow-x: hidden;
         padding-bottom: 3rem;
     }
-    .home-h2{
+    .lab-h2{
         font-size: 1.5rem;
         max-width: 100%;
     }
-    .home-background-image{
-        z-index: 0;
-        position: absolute;
-        opacity: 0.06;
-        top: 100%;
-        left: 50%;
-        margin-top: -50%;
-        margin-left: -50%;
-        width: 100%;
-    }
-    .home-clg-history{
-        margin:2rem 1.5rem;
-        width: 80%;
-    }
-    .home-history-p{
-        color: rgb(58, 58, 58);
-        margin-top: 16px;
-    }
-    .home-span{
-        font-weight: bold;
-    }/* 
-    .home-lab-main{
+    .lab-lab-main{
         margin:26px 24px;
         position: absolute;
         top: 8.5rem;
     }
-    .home-booking-div{
+    .lab-booking-div{
         display: flex;
         flex-wrap: wrap;
         width: 95%;
         margin: 10rem 0.2rem 0rem;
-    } */
+    }
 }

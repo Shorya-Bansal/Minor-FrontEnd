@@ -1,0 +1,263 @@
+@media screen and (min-device-width:1061px) {
+    .ticket-details-main{
+        width: 81%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        min-height: 100vh;
+        height: 100%;
+        font-family: "Lato";
+        z-index:0;
+
+    }
+    .ticket-details-head{
+        margin: 3rem 5rem;
+    }
+    .ticket-details-content{
+        border: 1px solid gray;
+        border-radius: 4px;
+        padding: 1rem 2rem 2rem;
+        margin-top:1rem;
+    }
+    .h6-problem{
+        font-weight: bold;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+    .ticket-problem{
+        margin-left: 0.5rem;
+        display: inline-block;
+        max-width: 75%;
+    }
+    .ticket-problem-photo{
+        margin:1rem 0rem 2rem;
+        max-width: 80%;
+        min-width: 45%;
+        max-height: 100%;
+    }
+    .ticket-button{
+        width: 35%;
+        margin:1rem 1rem 0.5rem 1rem;
+    }
+    .h4-reply{
+        margin-top: 0.7rem;
+    }
+    .ticket-reply-div{
+        border: 1px solid rgb(199, 199, 199) ;
+        border-radius: 4px;
+        width: 85%;
+        padding: 0.2rem 1.5rem 1.5rem;
+        margin-top: 2rem;
+    }
+    #content{
+        max-width: 99.55%;
+        border-radius: 4px;
+        height: 100%;
+        max-height: 120px;
+        min-height: 120px;    
+    }
+    .content,.subject{
+        width: 90%;
+        height: 2.6rem;
+        border-radius: 4px;
+        border: 1px solid #CACACA;
+        margin-top: 5px;
+        padding: 2px 6px;
+    }
+}
+@media screen and (max-device-width:1060px) and (min-device-width:769px){
+    .ticket-details-main{
+        width: 77%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .ticket-details-head{
+        margin: 2rem 2rem;
+    }
+    .ticket-details-content{
+        border: 1px solid gray;
+        border-radius: 4px;
+        padding: 1rem 2rem 2rem;
+        margin-top:1rem;
+    }
+    .h6-problem{
+        font-weight: bold;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+    .ticket-problem{
+        margin-left: 0.5rem;
+        display: inline-block;
+        max-width: 75%;
+    }
+    
+    .ticket-problem-photo{
+        margin:1rem 0rem 2rem;
+        max-width: 80%;
+        min-width: 45%;
+        max-height: 100%;
+    }
+    .ticket-button{
+        width: 35%;
+        margin:1rem 1rem 0.5rem 1rem;
+    }
+    .h4-reply{
+        margin-top: 0.7rem;
+    }
+    .ticket-reply-div{
+        border: 1px solid rgb(199, 199, 199) ;
+        border-radius: 4px;
+        width: 100%;
+        padding: 0.2rem 1.5rem 1.5rem;
+        margin-top: 2rem;
+    }
+    #content{
+        max-width: 99.55%;
+        border-radius: 4px;
+        height: 100%;
+        max-height: 120px;
+        min-height: 120px;    
+    }
+    .content,.subject{
+        width: 100%;
+        height: 2.6rem;
+        border-radius: 4px;
+        border: 1px solid #CACACA;
+        margin-top: 5px;
+        padding: 2px 6px;
+    }
+}
+@media screen and (max-device-width:768px) and (min-device-width:481px){
+    .ticket-details-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .ticket-details-head{
+        margin: 2rem 1.5rem;
+    }
+    .ticket-details-content{
+        border: 1px solid gray;
+        border-radius: 4px;
+        padding: 1rem 1rem 2rem;
+        margin-top:1rem;
+    }
+    .h6-problem{
+        font-weight: bold;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+    .ticket-problem{
+        margin-left: 0.5rem;
+        display: inline-block;
+        max-width: 75%;
+    }
+    
+    .ticket-problem-photo{
+        margin:1rem 0rem 2rem;
+        max-width: 80%;
+        min-width: 45%;
+        max-height: 100%;
+    }
+    .ticket-button{
+        width: 35%;
+        margin:1rem 1rem 0.5rem 1rem;
+    }
+    .h4-reply{
+        margin-top: 0.7rem;
+    }
+    .ticket-reply-div{
+        border: 1px solid rgb(199, 199, 199) ;
+        border-radius: 4px;
+        width: 100%;
+        padding: 0.2rem 0.9rem 1.5rem;
+        margin-top: 2rem;
+    }
+    #content{
+        max-width: 99.55%;
+        border-radius: 4px;
+        height: 100%;
+        max-height: 120px;
+        min-height: 120px;    
+    }
+    .content,.subject{
+        width: 100%;
+        height: 2.6rem;
+        border-radius: 4px;
+        border: 1px solid #CACACA;
+        margin-top: 5px;
+        padding: 2px 6px;
+    }
+}
+@media screen and (max-device-width:480px) {
+    .ticket-details-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Lato";
+        z-index:0
+    }
+    .ticket-details-head{
+        margin: 0.5rem 1rem;
+    }
+    .ticket-details-content{
+        border: 1px solid gray;
+        border-radius: 4px;
+        padding: 1rem 0.5rem 2rem;
+        margin-top:1rem;
+    }
+    .h6-problem{
+        font-weight: bold;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+    .ticket-problem{
+        margin-left: 0.5rem;
+        display: inline-block;
+        max-width: 75%;
+    }
+    .ticket-problem-photo{
+        margin:1rem 0rem 2rem;
+        max-width: 80%;
+        min-width: 45%;
+        max-height: 100%;
+    }
+    .ticket-button{
+        width: 45%;
+        margin:1rem 5px;
+    }
+    .h4-reply{
+        margin-top: 0.7rem;
+    }
+    .ticket-reply-div{
+        border: 1px solid rgb(199, 199, 199) ;
+        border-radius: 4px;
+        width: 100%;
+        padding: 0.2rem 0.7rem 1.5rem;
+        margin-top: 2rem;
+    }
+    #content{
+        max-width: 99.55%;
+        border-radius: 4px;
+        height: 100%;
+        max-height: 120px;
+        min-height: 120px;    
+    }
+    .content,.subject{
+        width: 100%;
+        height: 2.6rem;
+        border-radius: 4px;
+        border: 1px solid #CACACA;
+        margin-top: 5px;
+        padding: 2px 6px;
+    }
+}

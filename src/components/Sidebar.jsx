@@ -1,130 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { Link } from "react-router-dom"
+
+import AuthContext from '../auth/context';
+import allLabs from "../helper/allLabs";
 
 import logo from "../images/logo.jpg"
 
 import "../css/sidebar.css";
 
 function Sidebar(props) {
-    const [width, setWidth] = useState("");
+    const authContext = useContext(AuthContext);
+    const [width, setWidth] = useState(0);
+    const Labs = allLabs;
+
     useEffect(() => {
         setWidth(props.width);
     }, [props.width])
 
+    const handleClick = (values) => {
+        authContext.setLabName(values);
+        if (window.innerWidth < 769)
+            props.handleSidebar();
+    }
+
     return (
         <div>
             <div className="sidebar" style={{ width: width }}>
-                <div className="sidebar-outline" >
-                    <div className="sidebar-heading">
-                        <h4 style={{ fontWeight: 600, fontSize: "1.2rem" }}><img src={logo} className="sidebar-logo" alt="COllege Logo"></img>MINOR PROJECT</h4>
-                    </div>
-                    <hr style={{ height: "1.5px", color: "white", margin: "0 auto" }}></hr>
-                    <p>Auditorium</p>
+                <div className="sidebar-heading">
+                    <h4 style={{ fontWeight: 600, fontSize: "1.2rem" }}><img src={logo} className="sidebar-logo" alt="College Logo"></img>MINOR PROJECT</h4>
                 </div>
-                <div>
-
+                <div className="sidebar-outline" >
+                    <hr style={{ height: "1.5px", color: "white", margin: "0 auto" }}></hr>
+                    <ul className="sidebar-labs-details">
+                        {Labs.map((item, index) => {
+                            return (
+                                <div key={index}>
+                                    <Link to={{
+                                        pathname: `/home/${item.fullName}`,
+                                        state: { labName: item.fullName }
+                                    }}
+                                        style={{
+                                            textDecoration: "none",
+                                            color: "white"
+                                        }}>
+                                        <li className="sidebar-content-style"
+                                            onClick={() => {
+                                                handleClick(item.fullName);
+                                            }}>{item.shortName}</li>
+                                    </Link>
+                                </div>
+                            )
+                        })}
+                    </ul>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
 export default Sidebar;
 
 
-/*
-
-
-
-
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-
-import DehazeRoundedIcon from '@material-ui/icons/DehazeRounded';
-
-const useStyles = makeStyles({
-    list: {
-        width: 250,
-    },
-    fullList: {
-        width: 'auto',
-    },
-});
-
-function Sidebar_Mobile() {
-    const classes = useStyles();
-    const [state, setState] = React.useState({
-        top: false,
-        left: false,
-        bottom: false,
-        right: false,
-    });
-
-    const toggleDrawer = (anchor, open) => (event) => {
-        if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
-
-        setState({ ...state, [anchor]: open });
-    };
-
-    const list = (anchor) => (
-        <div
-            className={clsx(classes.list, {
-                [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-            })}
-            role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
-        >
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
-        </div>
-    );
-
-    return (
-        <div>
-            {['left'].map((anchor) => (
-                < React.Fragment key={anchor} >
-                    <Button onClick={toggleDrawer(anchor, true)}><DehazeRoundedIcon /></Button>
-                    <SwipeableDrawer
-                        anchor={anchor}
-                        open={state[anchor]}
-                        onClose={toggleDrawer(anchor, false)}
-                        onOpen={toggleDrawer(anchor, true)}
-                    >
-                        {list(anchor)}
-                    </SwipeableDrawer>
-                </React.Fragment>
-            ))
-            }
-        </div >
-    );
-}
-
-export default Sidebar_Mobile;
- */

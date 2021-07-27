@@ -1,6 +1,30 @@
-@media screen and (min-device-width:1025px) {
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c0c0c0; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #09c6f9; 
+  }
+
+
+@media screen and (min-device-width:1301px) {
     .sidebar{
-        height: 100vh;
+        height: 100%;
+        width:19%;
         border: 1px solid inherit;
         float: left;
         top: 0%;
@@ -9,24 +33,230 @@
         color: rgb(255, 255, 255);
         font-family: "Lato";
         text-align: center;
-        padding-top: 0.5rem;
-        transition: width 1s;
+        position: fixed;
     } 
     .sidebar-logo{
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         border:1px solid inherit;
         border-radius: 100%;
         object-fit: fill;
-        margin:3px 10px;
+        margin-right: 10px;
+    }
+    .sidebar-outline{    
+        position: relative;
+        left:0%;
+        height: 90%;
+        max-height: 100vh;
+        overflow-y: scroll;
+        text-align: left;
+        background-color: #045de9;
+        background-image: linear-gradient(315deg, #045de9 10%, #09c6f9 74%);
+        margin-bottom: 2rem;
     } 
+    .sidebar-heading{    
+        width:100%;
+        border:none;
+        display: inline-block;
+        text-align: center;
+        padding:0.8rem 0 0.5rem ;
+        top: 0px;
+        background-color: #045de9;
+        background-image: linear-gradient(315deg, #09c6f9 0%,#045de9 84%);
+    }
+    .sidebar-labs-details{
+        list-style: none;
+        padding-left: 1.2rem;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+    .sidebar-content-style{
+        padding: 0.7rem 0;
+        font-size: 1.05rem;
+        cursor: pointer;
+
+    }
+    .sidebar-content-style:hover,
+    .sidebar-content-style:active{
+        padding-left:0.5rem ;
+        transition: padding 0.3s ease-in;
+    }
 }
-@media screen and (max-device-width:769px) {
+@media screen and (min-device-width:1061px) and (max-device-width:1300px) {
     .sidebar{
-         height: 100%;
+        height: 100%;
+        width: 19%;
+        border: 1px solid inherit;
+        float: left;
+        top: 0%;
+        background-color: #045de9;
+        background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+        color: rgb(255, 255, 255);
+        font-family: "Lato";
+        text-align: center;
+        position: fixed;
+    } 
+    .sidebar-logo{
+        width: 35px;
+        height: 35px;
+        border:1px solid inherit;
+        border-radius: 100%;
+        object-fit: fill;
+        margin-right: 2px;
+    } 
+    .sidebar-outline{    
+        position: relative;
+        left:0%;
+        height: 90%;
+        max-height: 100vh; 
+        overflow-y: scroll;
+        text-align: left;
+        background-color: #045de9;
+        background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    }
+    .sidebar-heading{    
+        width:100%;
+        border:none;
+        display: inline-block;
+        text-align: center;
+        padding: 0.85rem 0;
+        background-color: #045de9;
+        background-image: linear-gradient(315deg, #09c6f9 0%,#045de9 84%);
+    }
+    .sidebar-labs-details{
+        list-style: none;
+        margin: 0;
+        padding-left: 1rem;
+        padding-bottom:1rem ;
+    }
+    .sidebar-content-style{
+        padding: 0.7rem 0;
+        font-size: 1rem;
+    }
+    .sidebar-content-style:hover,
+    .sidebar-content-style:active{
+        padding-left:0.5rem ;
+        transition: padding 0.3s ease-in;
+    }
+}
+@media screen and (max-device-width:1060px) and (min-device-width:769px){
+    .sidebar{
+        height: 100%;
+       width: 23%;
+       z-index: 2;
+       float: left;
+       top: 0%;
+       color: white;        
+       font-family: "Lato";
+       position: fixed;       
+       border: 1px solid inherit;
+       background-color: #045de9;
+       background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+
+   }
+   .sidebar-outline{    
+       position: relative;
+       left:0%;
+       height: 90%;
+       max-height: 100vh;
+       overflow-y: scroll;
+       text-align: left;
+       background-color: #045de9;
+       background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+   }
+   
+   .sidebar-logo{
+       width: 35px;
+       height: 35px;
+       border:1px solid inherit;
+       border-radius: 100%;
+       object-fit: fill;
+       margin:3px 10px;
+       display: none;
+   } 
+
+   .sidebar-heading{    
+       width:100%;
+       border:none;
+       display: inline-block;
+       padding:1.4rem 0 1rem;
+       text-align: center;
+       background-color: #045de9;
+       background-image: linear-gradient(315deg,  #09c6f9 0%,#045de9 74%);
+       
+   }
+   .sidebar-labs-details{
+       list-style: none;
+       padding-left: 1rem;
+       margin: 0;
+       padding-bottom: 1rem;
+   }
+   .sidebar-content-style{
+       padding: 0.7rem 0;
+       font-size: 1rem;
+   }
+   .sidebar-content-style:hover,
+   .sidebar-content-style:active{
+       padding-left:0.5rem ;
+       transition: padding 0.3s ease-in;
+   }
+}
+@media screen and (max-device-width:768px) and (min-device-width:481px){
+    .sidebar{
+        height: 100%;
+       width: 300px;
+       position: fixed; 
+       z-index: 3; 
+       left: 0%;
+       top: 0%;
+       overflow-x: hidden; 
+       transition: 0.8s;
+       color: white;
+   }
+   .sidebar-outline{    
+       position: relative;
+       left:0%;
+       height:91%;
+       overflow-y: scroll;
+       width: 300px;
+       text-align: left;
+       background-color: #045de9;
+       background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+   }
+   
+   .sidebar-logo{
+       width: 38px;
+       height: 38px;
+       border:1px solid inherit;
+       border-radius: 100%;
+       object-fit: fill;
+       margin:3px 10px;
+   } 
+
+   .sidebar-heading{    
+       width:300px;
+       border:none;
+       font-weight: 600;
+       display: inline-block;
+       padding:0.8rem  1rem 0.2rem;
+       background-color: #045de9;
+       background-image: linear-gradient(315deg,  #09c6f9 0%,#045de9 74%);
+   }
+   .sidebar-labs-details{
+       list-style: none;
+       margin: 0;
+   }
+   .sidebar-content-style{
+       padding: 0.7rem 0;
+       font-size: 1rem;
+   }
+}
+@media screen and (max-device-width:480px) {
+    .sidebar{
+        height: 100%;
         width: 0;
         position: fixed; 
-        z-index: 2; 
+        z-index: 3; 
         left: 0%;
         top: 0%;
         overflow-x: hidden; 
@@ -36,7 +266,9 @@
     .sidebar-outline{    
         position: relative;
         left:0%;
-        height: 100%;
+        height: 91%;
+        max-height: 91%;
+        overflow-y: scroll;
         width: 300px; 
         text-align: left;
         background-color: #045de9;
@@ -53,11 +285,22 @@
     } 
 
     .sidebar-heading{    
-        width:100%;
+        width:300px;
         border:none;
         font-weight: 600;
         display: inline-block;
         padding:0.5rem 0  0 4vh;
+        background-color: #045de9;
+        background-image: linear-gradient(315deg,  #09c6f9 0%,#045de9 74%);
+}
+    .sidebar-labs-details{
+        list-style: none;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+    .sidebar-content-style{
+        padding: 0.7rem 0;
+        font-size: 1rem;
     }
     
 }

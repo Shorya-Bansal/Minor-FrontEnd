@@ -1,0 +1,228 @@
+@media screen and (min-device-width:1061px) {
+    .allUsers-main{
+        width: 81%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100%;
+        padding-bottom: 3rem;
+        font-family: "Lato";
+        z-index:0;
+        min-height: 100vh;
+    }
+    .users-img img{
+        width: 150px;
+        height: 150px;
+        border: 1px solid inherit;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-top: -6rem;
+        
+    }
+    .users-details{
+        border: 1px solid rgb(133, 133, 133);
+        border-radius:4px ;
+        width: 650px;
+        margin: 1rem 0rem;
+        padding: 1rem;
+    }
+    .users-img{
+        display: inline-block;
+        width: 150px;
+        margin-right: 1.5rem;
+    }
+    .users{
+        display: inline-block;
+        position: relative;
+        padding-top: 0.5rem;
+    }
+    .users-head{
+        margin: 3rem 5rem;
+    }
+    .edit-button{
+        float: right;
+    }
+    .delete-button{
+        float: right;
+    }
+}
+@media screen and (max-device-width:1060px) and (min-device-width:769px){
+    .allUsers-main{
+        width: 77%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+        z-index:0;
+    }
+    
+    .users-img img{
+        width: 150px;
+        height: 150px;
+        border: 1px solid inherit;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-top: -6rem;
+        
+    }
+    .users-img{
+        display: inline-block;
+        width: 150px;
+        margin-right: 1.5rem;
+    }
+    .users{
+        display: inline-block;
+        position: relative;
+        padding-top: 0.5rem;
+    }
+    .users-head{
+        margin: 2rem 2rem;
+    }
+    .users-details{
+        border: 1px solid rgb(133, 133, 133);
+        border-radius:4px ;
+        width: 550px;
+        margin: 1rem 0rem;
+        padding: 1rem;
+    }
+    .edit-button{
+        float: right;
+    }
+    .delete-button{
+        float: right;
+    }
+}
+@media screen and (max-device-width:768px) and (min-device-width:500px){
+    .allUsers-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+        z-index:0;
+    }
+    .users-img img{
+        width: 100px;
+        height: 100px;
+        border: 1px solid inherit;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-top: -6rem;
+        
+    }
+    .users-img{
+        display: inline-block;
+        width: 100px;
+        margin-right: 1rem;
+    }
+    .users{
+        display: inline-block;
+        position: relative;
+        padding-top: 0.5rem;
+    }
+    .users-head{
+        margin: 2rem 1.5rem;
+    }
+    .users-details{
+        border: 1px solid rgb(133, 133, 133);
+        border-radius:4px ;
+        width: 100%;
+        margin: 1rem 0rem;
+        padding: 1rem;
+    }
+    .edit-button{
+        float: right;
+    }
+    .delete-button{
+        float: right;
+    }
+}
+@media screen and (max-device-width:499px) and (min-device-width:441px){
+    .allUsers-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+        z-index:0;
+    }
+    .users-img img{
+        width: 60px;
+        height: 60px;
+        border: 1px solid inherit;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-top: -6rem;
+        
+    }
+    .users-img{
+        display: inline-block;
+        width: 60px;
+        margin-right: 1rem;
+    }
+    .users{
+        display: inline-block;
+        position: relative;
+        padding-top: 0.5rem;
+    }
+    .users-head{
+        margin: 0.5rem 1rem;
+    }
+    .users-details{
+        border: 1px solid rgb(133, 133, 133);
+        border-radius:4px ;
+        width: 100%;
+        margin: 1rem 0rem;
+        padding: 1rem;
+    }
+    .edit-button{
+        float: right;
+    }
+    .delete-button{
+        float: right;
+    }
+}
+@media screen and (max-device-width:440px){
+    .allUsers-main{
+        width: 100%;
+        float: right;
+        background-color: rgb(240, 240, 240);
+        height: 100vh;
+        font-family: "Lato";
+        z-index:0;
+    }
+    .users-img img{
+        width: 60px;
+        height: 60px;
+        border: 1px solid inherit;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-top: -0.3rem;
+        
+    }
+    .users-img{
+        display: inline-block;
+        width: 90px;
+        margin-right: 1.1rem;
+    }
+    .users{
+        display: inline-block;
+        position: relative;
+        padding-top: 0.5rem;
+    }
+    .users-head{
+        margin: 0.5rem 1rem;
+    }
+    .users-details{
+        border: 1px solid rgb(133, 133, 133);
+        border-radius:4px ;
+        width: 100%;
+        margin: 1rem 0rem;
+        padding: 1rem;
+    }
+    .edit-button{
+        float: right;
+    }
+    .delete-button{
+        float: right;
+    }
+}

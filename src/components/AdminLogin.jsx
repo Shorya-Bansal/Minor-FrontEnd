@@ -1,5 +1,10 @@
-import { React } from 'react';/* 
-import { Link } from "react-router-dom" */
+
+
+//--------------- This Component is not in use ----------------
+
+
+/* //import { React } from 'react';/*
+import { Link } from "react-router-dom"
 import * as Yup from "yup";
 import { Formik } from "formik";
 
@@ -65,10 +70,10 @@ function AdminLogin() {
                                             onClick={handleSubmit} disabled={(errors.Admin_Email || errors.Admin_Password) ? true : false}>Login</button>
                                     </>}
                             </Formik>
-                            {/* 
+                            {/*
                             <Link to="/help" style={{ textDecoration: "none" }}>
                                 <p className="my-3" style={{ fontSize: "1.1rem" }} >Need Help?</p>
-                            </Link> */}
+                            </Link> }
                         </div>
                     </div>
                 </div>
@@ -80,4 +85,4 @@ function AdminLogin() {
     );
 }
 
-export default AdminLogin
+export default AdminLogin */

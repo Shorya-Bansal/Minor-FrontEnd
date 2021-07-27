@@ -33,8 +33,9 @@ function Login({ history }) {
     try {
       const response = await api.Login(values);
       if (response.ok) {
-        localStorage.setItem("auth-token", response.data);
-        const token = jwtDecode(response.data);
+        localStorage.setItem("auth-token", response.data.token);
+        const token = jwtDecode(response.data.token);
+        localStorage.setItem("image", response.data.ProfilePhoto);
         authContext.SetUser(token);
         history.replace("/home");
       } else {
@@ -139,7 +140,7 @@ function Login({ history }) {
           alt="College "
           style={{
             width: "100%",
-            height: "100%",
+            height: "100vh",
             position: "fixed",
             zIndex: -1,
             top: 0,
