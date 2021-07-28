@@ -13,11 +13,12 @@ function Auditorium() {
     const authContext = useContext(AuthContext);
     const [selectedDate, setSelectedDate] = React.useState(new Date());
     const timeSlot = ["09:00am-11:00am", "11:00am-01:00pm", "02:00pm-04:00pm", "04:00pm-06:00pm"];
-    const [bookings, setBookings] = useState(null);
+    const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
         getAllAuditoriumBookings();
     }, [selectedDate]);
+
 
     const getAllAuditoriumBookings = async () => {
         try {
@@ -50,7 +51,6 @@ function Auditorium() {
             console.log(err);
         }
     }
-
     return (
         <div>
             <ToastContainer />

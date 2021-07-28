@@ -3,42 +3,40 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 
 import AuthContext from "./../auth/context";
-import api from "../api/api";
 
 import "../css/bookingCard.css";
 
 function BookingCard(props) {
     const authContext = useContext(AuthContext);
     const [bookingStatus, setBookingStatus] = useState(false);
+    const [buttonVisibility, setVisibility] = useState("100%");
 
-    const [bookingDisplay, setDisplay] = useState({
-        Name: "",
-        Purpose: ""
-    });
 
     useEffect(() => {
-        check();
-    }, [props.selectedDate]);
-
-
-    const check = () => {
-        console.log(props, bookingStatus);
         if (props.bookings.length > 0) {
             props.bookings.map((item) => {
-                if (item.Date === props.selectedDate) {
-                    if (item.TimeSlot === props.time) {
-                        setBookingStatus(true);
+                if (item.TimeSlot === props.time) {
+                    if (item.Date !== props.selectedDate) {
+                        setBookingStatus(false);
+                        setVisibility("100%");
+                        return;
                     }
-                } else {
-                    return
+                    if (item.User === authContext.User._id) {
+                        setVisibility("100%");
+                    } else {
+                        setVisibility("none");
+                    }
+                    setBookingStatus(true);
+
                 }
-                setDisplay({
-                    Name: item.Name,
-                    Purpose: item.Purpose
-                })
             })
         }
-    }
+        else {
+            setVisibility("100%");
+            setBookingStatus(false);
+        }
+    }, [props])
+
 
     const BookingScehma = () => {
         return Yup.object().shape({
@@ -46,6 +44,7 @@ function BookingCard(props) {
             Purpose: Yup.string().required("Purpose is required").min(10).max(255),
         });
     };
+
 
     const handleBooking = (values) => {
         const allBookingDetails = {
@@ -63,6 +62,7 @@ function BookingCard(props) {
     const handleCancelBooking = () => {
         setBookingStatus(false);
     }
+    console.log(props);
 
     return (
         <div className="book-card-outline">
@@ -70,8 +70,8 @@ function BookingCard(props) {
             <p style={{ fontSize: "1.1rem" }}>Date: {props.selectedDate}</p>
             <Formik
                 initialValues={{
-                    Name: bookingDisplay.Name,
-                    Purpose: bookingDisplay.Purpose,
+                    Name: "",
+                    Purpose: ""
                 }}
                 onSubmit={(values) => handleBooking(values)}
                 validationSchema={BookingScehma}
@@ -85,6 +85,7 @@ function BookingCard(props) {
                     values
                 }) => (
                     <>
+
                         <div className="mb-2">
                             <label
                                 htmlFor="Name"
@@ -96,8 +97,8 @@ function BookingCard(props) {
                                 type="text"
                                 id="Name"
                                 disabled={bookingStatus}
-                                values={values.Name}
                                 onBlur={() => setFieldTouched("Name")}
+                                value={values.Name}
                                 className="booking-name"
                                 onChange={handleChange("Name")}
                                 spellCheck="false"
@@ -119,7 +120,7 @@ function BookingCard(props) {
                                 id="Purpose"
                                 cols="30"
                                 rows="4"
-                                values={values.Purpose}
+                                value={values.Purpose}
                                 onBlur={() => setFieldTouched("Purpose")}
                                 className="booking-purpose"
                                 onChange={handleChange("Purpose")}
@@ -141,7 +142,7 @@ function BookingCard(props) {
                         <button
                             type="submit"
                             className="btn btn-outline-primary mt-3 px-5"
-                            style={{ width: "100%" }}
+                            style={{ width: "100%", display: buttonVisibility }}
                             onClick={handleSubmit}
                             disabled={errors.Name || errors.Purpose || bookingStatus ? true : false}
                         >
@@ -151,7 +152,7 @@ function BookingCard(props) {
                 )}
             </Formik>
             <button className="btn btn-outline-danger mt-3 px-5 mb-4"
-                style={{ width: "100%" }}
+                style={{ width: "100%", display: buttonVisibility }}
                 onClick={handleCancelBooking}
             >Cancel</button>
         </div>

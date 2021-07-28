@@ -1,7 +1,7 @@
 import { create } from "apisauce";
 
 const apiClient = create({
-  baseURL: "http://192.168.1.69:3001",
+  baseURL: "http://192.168.1.75:3001",
   // To Get this IP adress follow
   // - Go to CMD
   // - Type ipconfig and press enter

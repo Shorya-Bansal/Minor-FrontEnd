@@ -8,6 +8,7 @@
         width: 320px;
         margin: 1rem 1.5rem 3rem;
         padding: 1rem 1.5rem;
+        min-height: 508px;
     }
     .book-time{
         padding: 15px 0px 5px;
