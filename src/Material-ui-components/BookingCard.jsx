@@ -234,6 +234,7 @@ function BookingCard(props) {
                     disabled={bookingStatus}
                     value={BookingValues.Name}
                     spellCheck="false"
+                    autoComplete="off"
                     onBlur={() => { handleBlur("Name") }}
                     onChange={handleChange}
                     onClick={handleClick}

@@ -9,13 +9,14 @@ import DatePicker from './../Material-ui-components/DatePicker';
 import BookingCard from "./../Material-ui-components/BookingCard";
 import "../css/labBook.css";
 
-function Auditorium({ history }) {
+function Auditorium(props) {
     const authContext = useContext(AuthContext);
     const [selectedDate, setSelectedDate] = React.useState(new Date());
     const timeSlot = ["09:00am-11:00am", "11:00am-01:00pm", "02:00pm-04:00pm", "04:00pm-06:00pm"];
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
+        authContext.setLabName(props.location.state.labName);
         getAllAuditoriumBookings();
     }, [selectedDate]);
 
