@@ -18,7 +18,7 @@ function Auditorium(props) {
     useEffect(() => {
         authContext.setLabName(props.location.state.labName);
         getAllAuditoriumBookings();
-    }, [selectedDate]);
+    }, [selectedDate]);// eslint-disable-line react-hooks/exhaustive-deps
 
 
     const getAllAuditoriumBookings = async () => {

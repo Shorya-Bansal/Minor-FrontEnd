@@ -28,7 +28,7 @@ function ContactTickets({ history }) {
     useEffect(() => {
         getContactTicketDetails();
         console.log(tickets);
-    }, [])
+    }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
     const getContactTicketDetails = async () => {
         try {

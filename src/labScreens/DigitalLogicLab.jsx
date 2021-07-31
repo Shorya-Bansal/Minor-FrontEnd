@@ -21,7 +21,7 @@ function DigitalLogicLab(props) {
         authContext.setLabName(props.location.state.labName);
         console.log(props);
         getAllDigitalLogicLabBookings();
-    }, [selectedDate]);
+    }, [selectedDate]);// eslint-disable-line react-hooks/exhaustive-deps
 
     const getAllDigitalLogicLabBookings = async () => {
         try {

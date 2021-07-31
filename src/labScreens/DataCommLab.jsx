@@ -17,7 +17,7 @@ function DataCommLab() {
 
     useEffect(() => {
         getAllDataCommLabBookings();
-    }, [selectedDate]);
+    }, [selectedDate]);// eslint-disable-line react-hooks/exhaustive-deps
 
     const getAllDataCommLabBookings = async () => {
         try {

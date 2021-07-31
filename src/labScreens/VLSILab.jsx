@@ -1,16 +1,52 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 import AuthContext from "./../auth/context";
 import Navbar from "../components/NavBar";
+import labApi from "../api/labApi";
+
 
 import DatePicker from './../Material-ui-components/DatePicker';
 import BookingCard from "./../Material-ui-components/BookingCard";
 import "../css/labBook.css";
 
-function VLSILab() {
+function VLSILab(props) {
     const authContext = useContext(AuthContext);
     const [selectedDate, setSelectedDate] = React.useState(new Date());
     const timeSlot = ["09:00am-11:00am", "11:00am-01:00pm", "02:00pm-04:00pm", "04:00pm-06:00pm"];
+    const [bookings, setBookings] = useState([]);
+
+    useEffect(() => {
+        authContext.setLabName(props.location.state.labName);
+        getAllVLSILabBookings();
+    }, [selectedDate]);// eslint-disable-line react-hooks/exhaustive-deps
+
+    const getAllVLSILabBookings = async () => {
+        try {
+            const response = await labApi.getAllVLSILabBooking(`${selectedDate.getDate()}/${selectedDate.getMonth() + 1}/${selectedDate.getFullYear()}`);
+            if (response.ok) {
+                console.log(response.data);
+                setBookings(response.data);
+            } else {
+                toast.error(response.data);
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    const VLSIBooking = async (values) => {
+        try {
+            const response = await labApi.VLSILabBooking(values);
+            if (response.ok) {
+                toast.success(response.data);
+            } else {
+                toast.error(response.data);
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
     const handleDateChange = (date) => {
         setSelectedDate(date);
@@ -19,6 +55,7 @@ function VLSILab() {
 
     return (
         <div>
+            <ToastContainer />
             <Navbar user={authContext.User}></Navbar>
             <div
                 className="lab-main"
@@ -35,7 +72,10 @@ function VLSILab() {
                         return <BookingCard
                             key={index}
                             time={item}
-                            selectedDate={`${selectedDate.getDate()}/${selectedDate.getMonth()}/${selectedDate.getFullYear()}`} />
+                            selectedDate={`${selectedDate.getDate()}/${selectedDate.getMonth() + 1}/${selectedDate.getFullYear()}`}
+                            confirmBooking={VLSIBooking}
+                            bookings={bookings}
+                        />
                     })}
                 </div>
             </div>

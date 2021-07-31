@@ -16,7 +16,6 @@ import EditDetails from "./components/EditUsersDetails";
 import ContactUs from "./components/ContactUs";
 import ContactTickets from "./components/AllContactTickets";
 import TicketDetails from "./components/TicketDetails";
-import LabBook from './components/LabBook';
 
 import Auditorium from "./labScreens/Auditorium";
 import EnggPhysicsLab from "./labScreens/EnggPhysicsLab";

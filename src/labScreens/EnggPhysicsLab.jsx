@@ -18,7 +18,7 @@ function EnggPhysicsLab(props) {
     useEffect(() => {
         authContext.setLabName(props.location.state.labName);
         getAllEnggPhysicsLabBookings();
-    }, [selectedDate]);
+    }, [selectedDate]);// eslint-disable-line react-hooks/exhaustive-deps
 
 
     const getAllEnggPhysicsLabBookings = async () => {

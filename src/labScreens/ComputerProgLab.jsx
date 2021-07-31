@@ -19,7 +19,7 @@ function ComputerProgLab(props) {
     useEffect(() => {
         authContext.setLabName(props.location.state.labName);
         getAllCompProgrammingLabBookings();
-    }, [selectedDate]);
+    }, [selectedDate]);// eslint-disable-line react-hooks/exhaustive-deps
 
     const getAllCompProgrammingLabBookings = async () => {
         try {
@@ -37,7 +37,7 @@ function ComputerProgLab(props) {
 
     const CompProgrammingBooking = async (values) => {
         try {
-            const response = await labApi.compProgrammingBooking(values);
+            const response = await labApi.CompProgrammingLabBooking(values);
             if (response.ok) {
                 toast.success(response.data);
             } else {

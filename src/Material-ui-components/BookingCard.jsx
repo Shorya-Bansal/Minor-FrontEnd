@@ -1,6 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-import * as Yup from "yup";
-import { Formik } from "formik";
 
 import AuthContext from "./../auth/context";
 
@@ -58,7 +56,7 @@ function BookingCard(props) {
             setBookingStatus(false);
             return;
         }
-    }, [props]);
+    }, [props]);// eslint-disable-line react-hooks/exhaustive-deps
 
     /*  useEffect(() => {
          setValues({

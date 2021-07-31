@@ -19,7 +19,7 @@ function HardwareLab(props) {
     useEffect(() => {
         authContext.setLabName(props.location.state.labName);
         getAllHardWareLabBookings();
-    }, [selectedDate]);
+    }, [selectedDate]);// eslint-disable-line react-hooks/exhaustive-deps
 
     const getAllHardWareLabBookings = async () => {
         try {
